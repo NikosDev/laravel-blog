@@ -6,7 +6,8 @@
   <div class="col-sm-8 blog-main">
 
     <!-- Show Post Made by User -->
-    <h1> {{ $post->title }} </h1> </br>
+    <h1> {{ $post->title }} </h1> 
+    <p> By <u> {{ $post->user['name'] }}: </u> </p> 
     {{ $post->body }}
     <hr>
 
@@ -15,7 +16,7 @@
       <ul class="list-group">
         @foreach($post->comments as $comment)
           <li class="list-group-item">
-            {{ $comment-> body }}
+           <span class="badge badge-info"> {{ $comment->user['name'] }} </span>  &nbsp; {{ $comment-> body }}
           </li>
          @endforeach
         </ul>
@@ -37,7 +38,8 @@
         </form>
       </div>
     </div>
-
+    
+    
 
   </div>
 

@@ -20,7 +20,8 @@ class SessionsController extends Controller
     public function store(){
 
       if (! auth()->attempt(request(['email', 'password']))){
-        return redirect('/');
+          session()->flash('message3', 'Wrong Credentials!');
+        return redirect('/login');
       }
 
       return redirect('/');

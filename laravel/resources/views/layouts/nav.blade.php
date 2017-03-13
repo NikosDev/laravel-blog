@@ -1,14 +1,32 @@
+<style>
+    #dropdownMenu1{
+    padding-top: 7px;
+    padding-bottom: 7px; 
+    }
+</style>
+
 <div class="blog-masthead">
-      <div class="container">
+    <div class="container">
         <nav class="nav blog-nav">
           <a class="nav-link active" href="/">Home</a>
           <a class="nav-link" href="/posts/create">Create a post</a>
-          <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
-
-          @if (Auth::check())
-          <a class="nav-link ml-auto" href="#"> {{ Auth::user()->name }} </a>
+          @if (!Auth::check())
+          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/register">Register</a>
           @endif
+
+            @if (Auth::check())         
+            <div class="nav-link ml-auto dropdown">
+                <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                {{ Auth::user()->name }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
+            </div>
+            @endif
         </nav>
-      </div>
     </div>
+</div>

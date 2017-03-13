@@ -30,6 +30,39 @@
       @include('layouts.errors')
 
     </form>
+    
+    <!-- Display Message if user is not logged in -->
+    
+    
+            @if (session('message'))
+            <div class="form-group">
+                <div class="alert alert-danger">
+                    <ul>
+                        <li> {{ session('message') }} </li>
+                    </ul>
+                </div>
+            </div>
+            @endif
+            @if (session('message2'))
+            <div class="form-group">
+                <div class="alert alert-danger">
+                    <ul>
+                        <li> {{ session('message2') }} </li>
+                    </ul>
+                </div>
+            </div>
+            @endif
+            @if (session('message3'))
+            <div class="form-group">
+                <div class="alert alert-danger">
+                    <ul>
+                        <li> {{ session('message3') }} </li>
+                    </ul>
+                </div>
+            </div>
+            @endif
+          
+    
 
   </div>
 
