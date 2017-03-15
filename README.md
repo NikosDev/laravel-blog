@@ -1,3 +1,3 @@
 # laravel-blog
 
-[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+(https://www.youtube.com/watch?v=l-cOnoM7sw0&t=1s")
