@@ -23,7 +23,7 @@
                 {{ Auth::user()->name }}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="dropdown-item" href="logout">Logout</a>
+                    <a class="dropdown-item" href="{{URL::to('/logout')}}">Logout</a>
                 </div>
             </div>
             @endif
