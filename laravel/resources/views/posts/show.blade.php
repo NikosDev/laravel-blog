@@ -26,7 +26,7 @@
     <!-- Show Comment FORM -->
     <div class="card">
       <div class="card-block">
-        <form method="POST" action="/posts/ {{ $post->id }}/comments">
+            <form method="POST" action="{{URL::to('/posts/'. $post->id .'/comments')}}">
           {{ csrf_field() }}
           <div class="form-group">
             <textarea name="body" placeholder="Your comment here." class="form-control" required></textarea>

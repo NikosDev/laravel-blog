@@ -8,11 +8,11 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="nav blog-nav">
-          <a class="nav-link active" href="/">Home</a>
-          <a class="nav-link" href="/posts/create">Create a post</a>
+          <a class="nav-link active" href="{{URL::to('/')}}">Home</a>
+          <a class="nav-link" href="{{URL::to('/posts/create')}}">Create a post</a>
           @if (!Auth::check())
-          <a class="nav-link" href="/login">Login</a>
-          <a class="nav-link" href="/register">Register</a>
+          <a class="nav-link" href="login">Login</a>
+          <a class="nav-link" href="register">Register</a>
           @endif
 
             @if (Auth::check())         
@@ -23,7 +23,7 @@
                 {{ Auth::user()->name }}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="dropdown-item" href="/logout">Logout</a>
+                    <a class="dropdown-item" href="logout">Logout</a>
                 </div>
             </div>
             @endif

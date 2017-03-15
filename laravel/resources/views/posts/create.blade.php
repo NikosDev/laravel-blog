@@ -6,7 +6,7 @@
 <div class="col-sm-8 blog-main">
   <h2> Publish a post </h2>
   <hr>
-  <form method="POST" action="/posts">
+  <form method="POST" action="{{URL::to('/posts')}}">
     {{ csrf_field() }}
 
 

@@ -15,7 +15,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="/css/blog.css" rel="stylesheet">
+    <link href="{{ asset('css/blog.css') }}" rel="stylesheet" type="text/css" >
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/2A73CABC-4C9C-EF46-A015-DA29310213E7/main.js" charset="UTF-8"></script></head>
 
   <body>
